@@ -54,6 +54,7 @@ def find_best(pieces, weight, value_func):
 
 if __name__ == "__main__":
     pieces = read_pieces()
-    weight = 30
-    value_func = lambda set: set.physical
+    weight = float(input("Input weight"))
+    n = ArmorPiece.get_number(input("Input stat"))
+    value_func = lambda set: set.get_stat(n)
     find_best(pieces.copy(), weight, value_func)

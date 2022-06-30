@@ -24,6 +24,10 @@ class ArmorPiece:
 
     weight: float
 
+    @staticmethod
+    def get_number(name):
+        return ['physical', 'strike', 'slash', 'pierce', 'magic', 'fire', 'lightning', 'holy', 'immunity', 'robustness', 'focus', 'vitality', 'poise', 'weight'].index(name)
+
     def get_stat(self, i):
         return [self.physical, self.strike, self.slash, self.pierce, self.magic, self.fire, self.lightning, self.holy, self.immunity, self.robustness, self.focus, self.vitality, self.poise, self.weight][i]
 
